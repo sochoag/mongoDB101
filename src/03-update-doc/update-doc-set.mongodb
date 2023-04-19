@@ -1,0 +1,12 @@
+use("platzi_store");
+db.products.updateOne(
+  { _id: 3 },
+  {
+    $set: {
+      name: "Named changed",
+      price: 10000,
+      tags: ["A", "B", "C"],
+    },
+  }
+);
+db.products.find();
